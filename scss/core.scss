@@ -17,6 +17,11 @@ body{
     display: flex;
     width: 100%;
     padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    img{
+      height: 29px;
+    }
     .hamburger{
       display: flex;
       margin: 10px;
@@ -55,12 +60,17 @@ body{
     transition: $transition;
     .item-menu-mobile{
       position: relative;
-      &:after{
-        content: '▾';
-        position: absolute;
-        right: 0;
-        top:0;
+      a{
+        padding: 10px;
+        display: block;
+        position:relative;
       }
+          &:after{
+            content: '+';
+            position: absolute;
+            right: 10px;
+            top:10px;
+          }
       .submenu{
         max-height: 0;
         overflow: hidden;
@@ -82,13 +92,18 @@ body{
   display: none;
   @include media('medium'){
     display: flex;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
   }
   .desktop-list-menu{
     display: flex;
     list-style-type: none;
-    li{
+    .item-menu{
       margin: 10px;
+      opacity: 0;
       position: relative;
+      font-weight: 700;
+  font-style: italic;
       .submenu{
         display: none;
         position: absolute;
@@ -111,7 +126,101 @@ body{
     }
   }
 }
-
+.header-main{
+  display: none;
+  padding: 15px;
+  justify-content: space-between;
+  align-items:center;
+  @include media('medium'){
+    display: flex;
+  }
+  img{
+    height: 29px;
+  }
+  .list-icons-user{
+    display: none;
+    @include media('medium'){
+      display: flex;
+    }
+  }
+  .menu-with-icon{
+    display: block;
+    position: relative;
+    z-index: 100;
+    height: 18px;
+    font-size: 13px;
+    color: #666;
+    font-weight: normal;
+    padding: 0 20px;
+    text-transform: none;
+    background-position: center left;
+    background-repeat: no-repeat;
+    padding: 0 20px !important;
+    margin-left: 20px;
+    background-image: url('https://media.xxxlutz.com/i/xxxlutz/NCGlwOgvzu4JnHxvbpcwBk3g/icon-big-house.png?upscale=padd&scl=1');
+    a{
+      text-decoration: none;
+      color: #666;
+      &:focus{
+        color: #333
+      }
+    }
+  }
+  .wo-icon{
+    background: none;
+    &:before{
+      content:'';
+      display: inline-block;
+    width: 23px;
+    height: 17px;
+    margin-bottom: -2px;
+    background: url('../assets/img/header-account-grey.png') left bottom no-repeat;
+    }
+  }
+  form{
+    position: relative;
+    .search-button{
+      position: absolute;
+      right: 0;
+      width: 34px;
+      height: 33px;
+      padding: 0;
+      border: none;
+      cursor: pointer;
+      background: url('../assets/img/icon-search.png') center no-repeat;
+      }
+    .search{
+      font-size: 13px;
+      line-height: 20px;
+      color: #333;
+      font-weight: normal;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 2px;
+      padding: 0 10px;
+      background: #fff;
+      height: 33px;
+      line-height: 33px;
+      float: left;
+      width: 30%;
+      transition: $transition;
+      padding: 0 34px 0 10px;
+      outline: none;
+      @include media('medium'){
+        width:300px ;
+        &:focus{
+          width:350px;
+          transition: $transition;
+        }
+      }
+    }
+  }
+}
+main{
+  img{
+    width:100%;
+  }
+}
 .sales {
   display: flex;
   flex-direction: column;
