@@ -335,10 +335,27 @@ body {
   position: absolute;
   width: 100%;
   right: 0;
+  width: 100vw;
+  position: absolute;
+  list-style: none;
+  right: -100vw;
+  padding: 20px;
+  -webkit-transform: translate(-60px, 10px);
+          transform: translate(-60px, 10px);
+  background: rgba(255, 255, 255, 0.9);
+  margin: -10px 0 0;
+}
+
+.desktop-menu .desktop-list-menu .item-menu .submenu li a {
+  color: black;
+  text-decoration: none;
 }
 
 .desktop-menu .desktop-list-menu .item-menu .submenu li .subsubmenu {
   display: none;
+  position: absolute;
+  list-style: none;
+  margin-left: 165px;
 }
 
 .desktop-menu .desktop-list-menu .item-menu .submenu li:hover .subsubmenu {
@@ -506,5 +523,9 @@ main img {
 .products article {
   width: 100%;
   height: auto;
+}
+
+.footer-media img {
+  width: 100%;
 }
 /*# sourceMappingURL=core.css.map */
