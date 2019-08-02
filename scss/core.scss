@@ -104,14 +104,31 @@ body{
       position: relative;
       font-weight: 700;
   font-style: italic;
+  cursor: pointer;
       .submenu{
         display: none;
         position: absolute;
         width: 100%;
         right: 0;
+        width: 100vw;
+        position: absolute;
+        list-style: none;
+        right: -100vw;
+        padding: 20px;
+        transform: translate(-60px, 10px);
+        background: rgba(255,255,255,.9);
+        margin:-10px 0 0;
         li{
+          a{
+            color:black;
+            text-decoration: none;
+          }
           .subsubmenu{
             display: none;
+            position: absolute;
+            list-style: none;
+            margin-left: 165px;
+            top:30px;
           }
           &:hover .subsubmenu{
             display: block;
@@ -243,6 +260,7 @@ main{
   width: 100%;
   height: auto;
 }
+<<<<<<< HEAD
 
 .trends-vouchers {
   padding: 1rem;
@@ -306,4 +324,10 @@ main{
 .footer-small-print img {
   width: 100%;
   height: auto;
+=======
+.footer-media{
+  img{
+    width:100%;
+  }
+>>>>>>> b2a760496a7c59049c4c32490cfaad6873bd16bc
 }
