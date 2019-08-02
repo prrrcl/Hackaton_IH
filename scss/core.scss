@@ -126,12 +126,49 @@ body{
 
 .products {
   padding: 1rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto;
+  display: flex;
+
 }
 
 .products article {
   width: 100%;
   height: auto;
+}
+
+.trends-vouchers {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.trends-vouchers img{
+  width: 100%;
+  height: auto;
+}
+
+.extras {
+  padding: 1rem;
+}
+
+.extras img{
+  width: 100%;
+  height: auto;
+}
+
+.footer-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background: lightgrey;
+}
+
+.footer-media img {
+  height: 2rem;
+}
+
+.footer-links {
+  
 }
