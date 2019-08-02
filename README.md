@@ -1,12 +1,12 @@
-#XXXLUTZ HACKATON
+# XXXLUTZ HACKATON
 
-##Description
+## Description
 A redesign of navigation to make it more fluid
 
-##User Stories
+## User Stories
 As a user I want to equip my next livingroom
 
-##Pages
+## Pages
 - Home 
 - Livingroom 
 - Product 
