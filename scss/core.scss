@@ -9,7 +9,6 @@
 body{
   font-family: 'Open Sans', sans-serif;
 }
-
 .mobile-menu{
   display: flex;
   flex-direction: column;
@@ -47,13 +46,34 @@ body{
   @include media('medium'){
     display: none;
   }
+
+
   .mobile-list-menu{
-    height: 0;
+    max-height: 0;
     overflow: hidden;
     transition: $transition;
+    .item-menu-mobile{
+      position: relative;
+      &:after{
+        content: '▾';
+        position: absolute;
+        right: 0;
+        top:0;
+      }
+      .submenu{
+        max-height: 0;
+        overflow: hidden;
+        transition: $transition
+      }
+      .sub-open{
+        max-height: 500px;
+        transition: $transition;
+      ;
+      }
+    }
   }
   .visible{
-    height: 100vh;
+    max-height: 100vh;
     transition: $transition;
   }
 }
@@ -61,5 +81,32 @@ body{
   display: none;
   @include media('medium'){
     display: flex;
+  }
+  .desktop-list-menu{
+    display: flex;
+    list-style-type: none;
+    li{
+      margin: 10px;
+      position: relative;
+      .submenu{
+        display: none;
+        position: absolute;
+        width: 100%;
+        right: 0;
+        li{
+          .subsubmenu{
+            display: none;
+          }
+          &:hover .subsubmenu{
+            display: block;
+          }
+        }
+      }
+      &:hover{
+        .submenu{
+          display:block;
+        }
+      }
+    }
   }
 }

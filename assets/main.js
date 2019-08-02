@@ -10,6 +10,12 @@ const main = () => {
     })
   }
 
+  const itemsMenuMobile = document.querySelectorAll('.item-menu-mobile');
+  itemsMenuMobile.forEach((e, index)=>{
+    e.addEventListener('click', (event)=>{
+      e.lastElementChild.classList.toggle('sub-open')
+    })
+  })
 }
 
 window.addEventListener('load', main);
