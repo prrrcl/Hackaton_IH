@@ -552,4 +552,45 @@ main img {
 .footer-media img {
   height: 2rem;
 }
+
+.footer-links {
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer-links a {
+  margin: 0.3rem 0.5rem;
+  color: black;
+}
+
+.footer-small-print {
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-small-print a {
+  width: 40%;
+  height: auto;
+}
+
+.footer-small-print img {
+  width: 100%;
+  height: auto;
+}
 /*# sourceMappingURL=core.css.map */
