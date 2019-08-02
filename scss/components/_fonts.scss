@@ -1,7 +1,8 @@
-@charset "UTF-8";
+
 /*---------------------------------------------------------------------------*
  * SF UI Display
  *---------------------------------------------------------------------------*/
+
 /** Black */
 @font-face {
   font-family: "SF Display";
@@ -68,6 +69,7 @@
 /*---------------------------------------------------------------------------*
  * SF UI Text
  *---------------------------------------------------------------------------*/
+
 /** Bold */
 @font-face {
   font-family: "SF Text";
@@ -172,160 +174,3 @@
   font-style: italic;
   src: url("https://sf.abarba.me/SF-UI-Text-UltrathinItalic.otf");
 }
-
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body {
-  font-family: "SF Display";
-  font-weight: 400;
-}
-
-.mobile-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.mobile-menu header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  padding: 10px;
-}
-
-.mobile-menu header .hamburger {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 10px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 25px;
-  height: 19px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.mobile-menu header .hamburger div {
-  width: 100%;
-  height: 3px;
-  background: black;
-  -webkit-transition: 0.4s cubic-bezier(0.77, 0, 0.175, 1);
-  transition: 0.4s cubic-bezier(0.77, 0, 0.175, 1);
-}
-
-.mobile-menu header .opened div:first-child {
-  -webkit-transform: rotate(45deg) translate(7px, 4px);
-          transform: rotate(45deg) translate(7px, 4px);
-  -webkit-transition-delay: 0.1s;
-          transition-delay: 0.1s;
-}
-
-.mobile-menu header .opened div:nth-child(2) {
-  opacity: 0;
-}
-
-.mobile-menu header .opened div:last-child {
-  -webkit-transform: rotate(-45deg) translate(7px, -4px);
-          transform: rotate(-45deg) translate(7px, -4px);
-}
-
-@media only screen and (min-width: 768px) {
-  .mobile-menu {
-    display: none;
-  }
-}
-
-.mobile-menu .mobile-list-menu {
-  max-height: 0;
-  overflow: hidden;
-  -webkit-transition: 0.4s cubic-bezier(0.77, 0, 0.175, 1);
-  transition: 0.4s cubic-bezier(0.77, 0, 0.175, 1);
-}
-
-.mobile-menu .mobile-list-menu .item-menu-mobile {
-  position: relative;
-}
-
-.mobile-menu .mobile-list-menu .item-menu-mobile:after {
-  content: '▾';
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.mobile-menu .mobile-list-menu .item-menu-mobile .submenu {
-  max-height: 0;
-  overflow: hidden;
-  -webkit-transition: 0.4s cubic-bezier(0.77, 0, 0.175, 1);
-  transition: 0.4s cubic-bezier(0.77, 0, 0.175, 1);
-}
-
-.mobile-menu .mobile-list-menu .item-menu-mobile .sub-open {
-  max-height: 500px;
-  -webkit-transition: 0.4s cubic-bezier(0.77, 0, 0.175, 1);
-  transition: 0.4s cubic-bezier(0.77, 0, 0.175, 1);
-}
-
-.mobile-menu .visible {
-  max-height: 100vh;
-  -webkit-transition: 0.4s cubic-bezier(0.77, 0, 0.175, 1);
-  transition: 0.4s cubic-bezier(0.77, 0, 0.175, 1);
-}
-
-.desktop-menu {
-  display: none;
-}
-
-@media only screen and (min-width: 768px) {
-  .desktop-menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-.desktop-menu .desktop-list-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  list-style-type: none;
-}
-
-.desktop-menu .desktop-list-menu li {
-  margin: 10px;
-  position: relative;
-}
-
-.desktop-menu .desktop-list-menu li .submenu {
-  display: none;
-  position: absolute;
-  width: 100%;
-  right: 0;
-}
-
-.desktop-menu .desktop-list-menu li .submenu li .subsubmenu {
-  display: none;
-}
-
-.desktop-menu .desktop-list-menu li .submenu li:hover .subsubmenu {
-  display: block;
-}
-
-.desktop-menu .desktop-list-menu li:hover .submenu {
-  display: block;
-}
-/*# sourceMappingURL=core.css.map */
