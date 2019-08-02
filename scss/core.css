@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*---------------------------------------------------------------------------*
  * SF UI Display
  *---------------------------------------------------------------------------*/
@@ -201,6 +200,16 @@ body {
   display: flex;
   width: 100%;
   padding: 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mobile-menu header img {
+  height: 29px;
 }
 
 .mobile-menu header .hamburger {
@@ -260,11 +269,17 @@ body {
   position: relative;
 }
 
+.mobile-menu .mobile-list-menu .item-menu-mobile a {
+  padding: 10px;
+  display: block;
+  position: relative;
+}
+
 .mobile-menu .mobile-list-menu .item-menu-mobile:after {
-  content: '▾';
+  content: '+';
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 10px;
+  top: 10px;
 }
 
 .mobile-menu .mobile-list-menu .item-menu-mobile .submenu {
@@ -295,6 +310,8 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
   }
 }
 
@@ -305,27 +322,155 @@ body {
   list-style-type: none;
 }
 
-.desktop-menu .desktop-list-menu li {
+.desktop-menu .desktop-list-menu .item-menu {
   margin: 10px;
+  opacity: 0;
   position: relative;
+  font-weight: 700;
+  font-style: italic;
 }
 
-.desktop-menu .desktop-list-menu li .submenu {
+.desktop-menu .desktop-list-menu .item-menu .submenu {
   display: none;
   position: absolute;
   width: 100%;
   right: 0;
 }
 
-.desktop-menu .desktop-list-menu li .submenu li .subsubmenu {
+.desktop-menu .desktop-list-menu .item-menu .submenu li .subsubmenu {
   display: none;
 }
 
-.desktop-menu .desktop-list-menu li .submenu li:hover .subsubmenu {
+.desktop-menu .desktop-list-menu .item-menu .submenu li:hover .subsubmenu {
   display: block;
 }
 
-.desktop-menu .desktop-list-menu li:hover .submenu {
+.desktop-menu .desktop-list-menu .item-menu:hover .submenu {
   display: block;
+}
+
+.header-main {
+  display: none;
+  padding: 15px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .header-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.header-main img {
+  height: 29px;
+}
+
+.header-main .list-icons-user {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .header-main .list-icons-user {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.header-main .menu-with-icon {
+  display: block;
+  position: relative;
+  z-index: 100;
+  height: 18px;
+  font-size: 13px;
+  color: #666;
+  font-weight: normal;
+  padding: 0 20px;
+  text-transform: none;
+  background-position: center left;
+  background-repeat: no-repeat;
+  padding: 0 20px !important;
+  margin-left: 20px;
+  background-image: url("https://media.xxxlutz.com/i/xxxlutz/NCGlwOgvzu4JnHxvbpcwBk3g/icon-big-house.png?upscale=padd&scl=1");
+}
+
+.header-main .menu-with-icon a {
+  text-decoration: none;
+  color: #666;
+}
+
+.header-main .menu-with-icon a:focus {
+  color: #333;
+}
+
+.header-main .wo-icon {
+  background: none;
+}
+
+.header-main .wo-icon:before {
+  content: '';
+  display: inline-block;
+  width: 23px;
+  height: 17px;
+  margin-bottom: -2px;
+  background: url("../assets/img/header-account-grey.png") left bottom no-repeat;
+}
+
+.header-main form {
+  position: relative;
+}
+
+.header-main form .search-button {
+  position: absolute;
+  right: 0;
+  width: 34px;
+  height: 33px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  background: url("../assets/img/icon-search.png") center no-repeat;
+}
+
+.header-main form .search {
+  font-size: 13px;
+  line-height: 20px;
+  color: #333;
+  font-weight: normal;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  padding: 0 10px;
+  background: #fff;
+  height: 33px;
+  line-height: 33px;
+  float: left;
+  width: 30%;
+  -webkit-transition: 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+  padding: 0 34px 0 10px;
+  outline: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .header-main form .search {
+    width: 300px;
+  }
+  .header-main form .search:focus {
+    width: 350px;
+    -webkit-transition: 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+  }
+}
+
+main img {
+  width: 100%;
 }
 /*# sourceMappingURL=core.css.map */
